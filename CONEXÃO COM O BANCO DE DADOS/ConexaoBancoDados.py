@@ -53,6 +53,17 @@ def inserir_params(nome,numero,endereco):
     connection.close()
 
 
+#função update
+def atualizar():
+    connection = get_connection()
+    cursor = connection.cursor()
+    sql="UPDATE TBL_AULA_PYTTHON SET nome= 'Júlio' WHERE id = 1"
+    cursor.execute()
+    connection.commit()
+    print(f'dados Atualizados')
+    cursor.close()
+    connection.close()
+
 
 #principal
 
