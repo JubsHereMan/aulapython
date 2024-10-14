@@ -41,11 +41,11 @@ def inserir():
    connection.close()
 
 
-def inserir_param(nome,numero,endereco):
+def inserir_params(nome,numero,endereco):
     connection = get_connection()
     cursor = connection.cursor()
-    sql= "SELECT * FROM TBL_AULA_PYTTHON(nome,numero,ebderec0) VALUES({nome},{numero},{endereco})"
-    data=(nome, numero,sobrenome)
+    sql= "SELECT * FROM TBL_AULA_PYTTHON(nome,numero,endereco) VALUES({nome},{numero},{endereco})"
+    data=(nome, numero,endereco)
     cursor.execute(sql,data)
     connection.commit()
     print(f'Dados inseridos!')
@@ -61,4 +61,4 @@ print(f'versão{connection.version}')
 listar()
 inserir()
 listar()
-#inserir_params('Júlio',21,'rua jaci')
+inserir_params('Fernando',31,'rua piramboia')
